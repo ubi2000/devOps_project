@@ -13,7 +13,7 @@ import os
 @app.route('/')
 @app.route('/home')
 def home():
-    """Renders the home page.""""""
+    """Renders the home page."""
     return render_template(
         'index.html',
         title='Home Page',
@@ -23,7 +23,7 @@ def home():
 def version():
     return jsonify({
         "instance": os.environ.get('INSTANCE_NAME', 'unknown'),
-        "version": "200"
+        "version": "2.0"
     })
 @app.route('/contact')
 def contact():
