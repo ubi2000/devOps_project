@@ -13,7 +13,7 @@ import os
 @app.route('/')
 @app.route('/home')
 def home():
-    """Renders the home page."""
+    """Renders the home page.""""""
     return render_template(
         'index.html',
         title='Home Page',
@@ -23,7 +23,7 @@ def home():
 def version():
     return jsonify({
         "instance": os.environ.get('INSTANCE_NAME', 'unknown'),
-        "version": "500"
+        "version": "200"
     })
 @app.route('/contact')
 def contact():
@@ -62,3 +62,5 @@ def db_time():
         return jsonify({"mysql_time": str(result[0])})
     except Exception as e:
         return jsonify({"error": str(e)}), 500
+        
+        # saklndlk
